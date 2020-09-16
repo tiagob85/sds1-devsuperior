@@ -32,10 +32,12 @@ public class Game implements Serializable{
 	private String title;
 	private Platform platform;
 	
+
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 	
+
 	@OneToMany(mappedBy = "game")
 	List<Record> record = new ArrayList<>();
 	
